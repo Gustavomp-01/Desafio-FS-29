@@ -11,7 +11,8 @@
 
 html{
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    /* função para deixar a fonte responsiva, onde 25px é o tamanho minimo e 5vw 5% da tela em casos de que a tela tenha que ter mais de 25px de font-size*/
+    font-size: max(10px, 1vw); 
     scroll-behavior: smooth;
 
 }
@@ -76,7 +77,7 @@ main {
 
         img{
             height: 11rem;
-            padding-bottom: 1rem;
+            padding-bottom: 1rem;           
         }
 
         h2 {
@@ -148,8 +149,8 @@ main {
     }
     
     .Imagem-2 {
-    padding-left: 4rem;
-    }
+        padding-left: 4rem;
+        }
 
     .Texto-Descontos {
         padding-left: 2rem ;
@@ -234,4 +235,73 @@ footer {
         }
     
    
+}
+
+/* Responsividade */
+
+/* Desktops and Laptops */
+@media (max-width: 1440px){
+
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+   
+    img {
+        width: 60vw;
+        height: auto;
+    }
+    .Icones{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Texto-Descontos {
+        padding-top: 8rem;
+    }
+
+    .Texto-Temperos {
+        padding-top: 8rem;
+    }
+    
+    
+}
+
+/* Phones */
+@media (max-width: 600px){
+    
+
+    main{
+
+        .Descontos {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            
+
+            .Texto-Descontos {
+                padding-bottom: 0;
+            }
+
+            .Imagem-2{
+                padding-left: 110px;
+                width: 100vh;
+            }
+        }
+        .Temperos {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+
+            .Texto-Temperos{
+                padding-bottom: 0;
+            }
+            
+            
+        }
+        .Icones{
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
